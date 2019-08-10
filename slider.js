@@ -53,5 +53,14 @@ function showCarosele() {
 
 function clearslider() {
     $("#slider ul").html("")
+
+}
+function createSlider(data) {
+    if ($("#slider ul").children().length === 0) {
+        const slide = $("<li></li>").html("<h1>Reasult<h1>");
+        $("#slider ul").append(slide);
+    }
+    const flag = $("<li></li>").append($("<img></img>").attr("src", data));
+    $("#slider ul").append(flag);
 };
 

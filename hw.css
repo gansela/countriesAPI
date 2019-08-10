@@ -1,3 +1,14 @@
+img {
+    position: relative;
+    display: block;
+    float: left;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    z-index: 9;
+}
+
+
 #slider {
     position: relative;
     overflow: hidden;
@@ -40,13 +51,14 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
-    opacity: 0.8;
+    opacity: 0.01;
     cursor: pointer;
   }
   
   a.control_prev:hover,
   a.control_next:hover {
     opacity: 1;
+    
   }
   
   a.control_prev {

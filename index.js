@@ -10,14 +10,21 @@ const MODEL_DOM = {
 jQuery(document).ready(function ($) {
 
     function init() {
-
+        hideCarosele()
         const { mainInput, findAllBtn, findOneBtn, capitalCityBtn } = MODEL_DOM;
         findAllBtn.addEventListener("click", () => {
-            findAll(mainInput.value.toLowerCase())
+            const reasultArray = findAll(mainInput.value.toLowerCase())
+            clearslider()
+            reasultArray.forEach((flag) =>{
+                createSlider(flag)
+            })
+            showCarosele()
         })
         findOneBtn.addEventListener("click", () => {
-            oneReasult = findOne(mainInput.value.toLowerCase())
-
+            const oneReasult = findOne(mainInput.value.toLowerCase())
+            clearslider()
+            createSlider(oneReasult)
+            showCarosele()
         })
         capitalCityBtn.addEventListener("click", () => {
             findAll(mainInput.value.toLowerCase())
