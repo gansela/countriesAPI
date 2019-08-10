@@ -8,6 +8,16 @@ img {
     z-index: 9;
 }
 
+.capital{
+    position: absolute;
+    top: 120px;
+    display: block;
+    size: 50px;
+    color: black;
+    z-index: 9;
+    font-size: 3rem
+
+}
 
 #slider {
     position: relative;
@@ -53,6 +63,7 @@ img {
     font-size: 18px;
     opacity: 0.01;
     cursor: pointer;
+    
   }
   
   a.control_prev:hover,

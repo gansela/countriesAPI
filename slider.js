@@ -55,12 +55,16 @@ function clearslider() {
     $("#slider ul").html("")
 
 }
-function createSlider(data) {
+function createSlider(data, cap) {
     if ($("#slider ul").children().length === 0) {
-        const slide = $("<li></li>").html("<h1>Reasult<h1>");
+        const slide = $("<li></li>").html("<h1>Reasult<h1>").css({ "padding-top": "120px" });
         $("#slider ul").append(slide);
     }
-    const flag = $("<li></li>").append($("<img></img>").attr("src", data));
+    const flag = $("<li></li>").append($("<img></img>").attr("src", data.flag));
     $("#slider ul").append(flag);
+    if (cap) {
+        flag.append($("<span></span>").html(data.capital).attr("class", "capital"));
+        $("img").css({"height": "80%"});
+    }
 };
 
